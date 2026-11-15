@@ -235,13 +235,13 @@ $$;
 
 revoke all on function private.set_passcode(text, text) from public, anon, authenticated;
 
--- ↓↓↓ 아래 한 줄의 '1004' 를 우리 가족만 아는 비밀번호로 바꿔 실행하세요 ↓↓↓
-select private.set_passcode('1004');
+-- ↓↓↓ 아래 한 줄의 '여기에_가족_비밀번호_입력' 을 우리 가족만 아는 비밀번호로 바꿔 실행하세요 ↓↓↓
+select private.set_passcode('여기에_가족_비밀번호_입력');
 
 -- 나중에 비밀번호를 바꾸고 싶으면 위 한 줄만 고쳐서 다시 실행하면 됩니다.
 
 -- ----------------------------------------------------------------------------
 -- 확인용 (선택): 아래 주석을 풀고 실행하면 설정이 잘 됐는지 볼 수 있습니다.
---   select public.family_unlock('1004');          -- true 가 나오면 정상
---   select public.family_load_schedules('1004');  -- {"items": []} 가 나오면 정상
+--   select public.family_unlock('여기에_가족_비밀번호_입력');          -- true 가 나오면 정상
+--   select public.family_load_schedules('여기에_가족_비밀번호_입력');  -- {"items": []} 가 나오면 정상
 -- ----------------------------------------------------------------------------

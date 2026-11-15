@@ -808,19 +808,18 @@
      1. 설정 — 여기만 고치면 됩니다.
      ============================================================ */
   const CONFIG = {
-    // Supabase를 연결하려면 아래 두 값을 채우세요. 비워 두면 이 기기(localStorage)에만 저장됩니다.
-    SUPABASE_URL: '',            // 예: 'https://abcdefghijkl.supabase.co'
-    SUPABASE_ANON_KEY: '',       // Supabase > Project Settings > API > anon public
+    // Supabase 연결 값. 비워 두면 이 기기(localStorage)에만 저장됩니다.
+    SUPABASE_URL: 'https://tuejokazctxejnpjmwwt.supabase.co', // Project URL
+    SUPABASE_ANON_KEY: 'sb_publishable_bjAGvM3zPJvP1xX1dU2QnA_k5HhXIVy', // publishable (공개되어도 되는 키)
     FAMILY_ID: 'family',         // 가족 구분 값 (그대로 두면 됩니다)
 
-    // Supabase 연결 전, 이 기기에서만 쓰는 가족 비밀번호.
-    //  * 이 기기 모드(localStorage)에서는 이 값으로 잠금을 풉니다.
-    //  * Supabase에 올린 뒤에는 이 값을 빈 문자열로 바꿔 두세요.
-    //    그러면 비밀번호가 소스에 남지 않고, Supabase가 서버에서 확인합니다.
-    FAMILY_PASSCODE: '1004',
+    // 이 기기에서만 쓰는 가족 비밀번호. Supabase에 연결된 지금은 비워 둡니다.
+    //  * 비워 두면 비밀번호가 소스에 남지 않고, Supabase가 서버에서 확인합니다.
+    //  * Supabase 없이 이 기기만 쓰려면 여기에 숫자를 넣으면 됩니다.
+    FAMILY_PASSCODE: '',
 
     // 처음 열었을 때 화면을 미리 보여줄 예시 일정 (실제로 쓰기 시작하면 false)
-    SEED_DEMO: true
+    SEED_DEMO: false
   };
 
   /* ============================================================
