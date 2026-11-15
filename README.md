@@ -29,6 +29,7 @@
 일정 내용은 가족 비밀번호를 통과해야만 읽을 수 있어서, 링크를 알아도 내용은 보이지 않습니다.
 
 연결은 이미 끝나 있어서 아래는 다시 만들 때를 위한 메모입니다.
+지금 연결된 프로젝트: Supabase `family-calendar` (Northeast Asia · Seoul), 주소 `https://tuejokazctxejnpjmwwt.supabase.co`
 
 1. <https://supabase.com> 에서 구글 계정으로 가입 → `New project` (이름은 아무거나, 무료 플랜)
 2. 프로젝트가 열리면 왼쪽 `SQL Editor` → `New query` →
