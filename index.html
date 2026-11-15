@@ -950,7 +950,13 @@
   }
 
   function isAuthError(err) {
-    return err && err.name === 'ApiError' && (err.status === 401 || err.status === 403 || String(err.body).indexOf('invalid_passcode') >= 0);
+    if (!err || err.name !== 'ApiError') return false;
+    if (err.status === 401 || err.status === 403) return true;
+    var body = String(err.body);
+    // 서버가 돌려주는 '가족 비밀번호가 달라요.' (28000 / invalid_passcode) 도 잠금으로 처리
+    return body.indexOf('invalid_passcode') >= 0 ||
+      body.indexOf('28000') >= 0 ||
+      body.indexOf('가족 비밀번호가 달라요') >= 0;
   }
 
   function readJSON(key, fallback) {
