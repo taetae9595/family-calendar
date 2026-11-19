@@ -1,5 +1,5 @@
 /* 우리 가족 달력 · 오프라인 캐시 (홈 화면 앱으로 설치할 때 필요) */
-const CACHE = 'family-calendar-v2';
+const CACHE = 'family-calendar-v3';
 const ASSETS = [
   './',
   './index.html',
